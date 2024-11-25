@@ -4,5 +4,6 @@
 /.idea
 /.vscode
 .env
+.env.testing
 .env.backup
 .phpunit.result.cache

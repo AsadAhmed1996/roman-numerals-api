@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\ConversionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('convert', [ConversionController::class, 'convertInteger']);
+Route::get('recent-conversions', [ConversionController::class, 'listRecentConversions']);
+Route::get('top-conversions', [ConversionController::class, 'listTop10Conversions']);
